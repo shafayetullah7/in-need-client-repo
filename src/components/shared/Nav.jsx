@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../access/AuthProvider";
 
 const Nav = () => {
     const navitems = <>
@@ -7,6 +9,15 @@ const Nav = () => {
     </>;
 
     const navigate = useNavigate();
+    const {user,logout,loading} = useContext(AuthContext);
+
+    const handleLogout =() =>{
+        logout()
+        .then(result=>{
+            console.log(result);
+        })
+        .catch(err=>console.log(err.message))
+    }
 
     return (
         <div className="navbar px-5 py-3">
@@ -27,7 +38,12 @@ const Nav = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-            <button className="outline-none border border-[#FF6D60] px-4 py-2 rounded-md font-bold text text-[#FF6D60]" onClick={()=>navigate('/login')}>Login</button>
+            {
+                !loading && <div>
+                    {!user && <button className="outline-none border border-[#FF6D60] px-4 py-2 rounded-md font-bold text text-[#FF6D60]" onClick={()=>navigate('/login')}>Login</button>}
+                    {user && <button className="outline-none border border-[#FF6D60] px-4 py-2 rounded-md font-bold text text-[#FF6D60]" onClick={handleLogout}>Logout</button>}
+                </div>
+            }
             </div>
         </div>
     );
