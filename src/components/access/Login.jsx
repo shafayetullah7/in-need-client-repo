@@ -37,7 +37,7 @@ const Login = () => {
   return (
     <div className="flex justify-center mt-40">
       <div className="w-[350px] p-10 bg-white rounded shadow-xl">
-        <h1 className="text-2xl font-bold mb-6 text-[#003F5C]">Login</h1>
+        <h1 className="text-2xl font-bold mb-6 text-[#FF6D60]">Login</h1>
         
         <form onSubmit={handleSubmit}>
 
@@ -53,12 +53,12 @@ const Login = () => {
 
           {error && <p className="text-red-600 text-xs mb-4">{error}</p>}
           <div>
-            <input type="submit" value="Login" className="outline-none border border-[#003F5C] px-4 py-2 rounded-md font-bold text text-[#003F5C] active:scale-95 duration-150 cursor-pointer hover:text-white hover:bg-[#003F5C]" />
+            <input type="submit" value="Login" className="outline-none border border-[#FF6D60] px-4 py-2 rounded-md font-bold text text-[#FF6D60] active:scale-95 duration-150 cursor-pointer hover:text-white hover:bg-[#FF6D60]" />
           </div>
 
         </form>
 
-        <p className='mt-7 text-sm text-center'>Do not have an account? <Link className='text-[#003F5C] font-bold underline' to={'/register'}>Register</Link></p>
+        <p className='mt-7 text-sm text-center'>Do not have an account? <Link className='text-[#FF6D60] font-bold underline' to={'/register'}>Register</Link></p>
       </div>
     </div>
   );

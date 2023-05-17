@@ -68,7 +68,7 @@ const Register = () => {
   return (
     <div className="flex justify-center mt-24">
         <div className="w-[400px] p-6 bg-white rounded shadow-xl">
-            <h1 className="text-2xl font-bold mb-6 text-[#003F5C]">Create an account</h1>
+            <h1 className="text-2xl font-bold mb-6 text-[#FF6D60]">Create an account</h1>
 
             <form onSubmit={handleSubmit} encType="multipart/form-data">
                 <div className="grid grid-cols-2 gap-4">
@@ -122,10 +122,10 @@ const Register = () => {
 
                 {error && <p className="text-red-600 text-xs mt-2">{error}</p>}
                 <div className="mt-4">
-                    <input type="submit" value="Register"className="outline-none border border-[#003F5C] px-4 py-2 rounded-md font-bold text text-[#003F5C] active:scale-95 duration-150 cursor-pointer hover:text-white hover:bg-[#003F5C]"/>
+                    <input type="submit" value="Register"className="outline-none border border-[#FF6D60] px-4 py-2 rounded-md font-bold text text-[#FF6D60] active:scale-95 duration-150 cursor-pointer hover:text-white hover:bg-[#FF6D60]"/>
                 </div>
             </form>
-            <p className="mt-4 text-sm">Already have an account?{' '}<Link className="text-[#003F5C] font-bold underline" to="/login">Login</Link></p>
+            <p className="mt-4 text-sm">Already have an account?{' '}<Link className="text-[#FF6D60] font-bold underline" to="/login">Login</Link></p>
         </div>
     </div>
     );

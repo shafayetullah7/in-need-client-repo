@@ -9,7 +9,12 @@ const Nav = () => {
     </>;
 
     const navigate = useNavigate();
-    const {user,logout,loading} = useContext(AuthContext);
+    const {user,logout,loading,setLoading} = useContext(AuthContext);
+
+    const handleLogin = ()=>{
+        setLoading(true);
+        navigate('/login');
+    }
 
     const handleLogout =() =>{
         logout()
@@ -20,7 +25,7 @@ const Nav = () => {
     }
 
     return (
-        <div className="navbar px-5 py-3">
+        <div className="navbar px-5 py-3 bg-base-200 bg-opacity-50">
             <div className="navbar-start">
                 <div className="dropdown">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -40,7 +45,7 @@ const Nav = () => {
             <div className="navbar-end">
             {
                 !loading && <div>
-                    {!user && <button className="outline-none border border-[#FF6D60] px-4 py-2 rounded-md font-bold text text-[#FF6D60]" onClick={()=>navigate('/login')}>Login</button>}
+                    {!user && <button className="outline-none border border-[#FF6D60] px-4 py-2 rounded-md font-bold text text-[#FF6D60]" onClick={()=>handleLogin()}>Login</button>}
                     {user && <button className="outline-none border border-[#FF6D60] px-4 py-2 rounded-md font-bold text text-[#FF6D60]" onClick={handleLogout}>Logout</button>}
                 </div>
             }
