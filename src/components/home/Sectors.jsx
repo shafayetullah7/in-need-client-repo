@@ -25,7 +25,7 @@ const Sectors = () => {
     },[])
 
     return (
-        <div className="bg-base-300 p-10 py-20 rounded-2xl">
+        <div className="bg-[#ffeeee] p-10 py-20 rounded-2xl">
             <div>
             <h1 className="text-5xl font-bold text-center">Find Your Purpose, Join as a VOLUNTEER</h1>
             <p className="md:w-[70%] w-full mx-auto text-center mt-5 tracking-wider">Ready to make a difference? Explore our inspiring volunteer sectors and discover where your passion meets impact. Join forces with like-minded individuals and contribute to causes that matter.</p>
@@ -38,7 +38,7 @@ const Sectors = () => {
                             <AccordionItem key={sector._id} className="rounded-xl overflow-hidden my-2 border cursor-pointer border-[#FF6D60]">
                                 <AccordionItemHeading>
                                     <AccordionItemButton>
-                                        <p className="inline-block font-bold">{sector.name}</p>
+                                        <p className="inline-block font-bold">{sector.name}<span className="inline-block mx-10 text-xs border px-2 rounded-lg font-normal">In-Need</span></p>
                                     </AccordionItemButton>
                                 </AccordionItemHeading>
                                 <AccordionItemPanel>

@@ -41,14 +41,14 @@ const Post = () => {
     
     return (
         <div className="grid grid-cols-2 gap-20 border-4 border-[#30df61] p-20 rounded-2xl">
-            <div data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" className="flex flex-col gap-10 items-center justify-center">
+            <div data-aos="fade-right" data-aos-delay="50" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" className="flex flex-col gap-10 items-center justify-center">
                 <h1 className="text-7xl text-[#30df61] font-bold text-center">Ask for Volunteers</h1>
                 <div className="text-gray-600">
                     <p className="md:w-[70%] w-full mx-auto text-center mt-5 tracking-widest">Do you have a project or an event that could benefit from the support of dedicated volunteers? We're here to help make it happen! Whether you're organizing a community initiative, a charity event, or a social project, our platform connects you with passionate volunteers ready to lend a hand.</p>
                     <p className="md:w-[70%] w-full mx-auto text-center mt-5 tracking-widest">Simply fill out the form below to submit your volunteer request. Describe your project, specify the skills needed, and let us know how volunteers can contribute. Together, we can achieve extraordinary things and make a lasting impact in our community.</p>
                 </div>
             </div>
-            <div data-aos="fade-left"  data-aos-delay="20" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center">
+            <div data-aos="fade-left"  data-aos-delay="50" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center">
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid grid-cols-2 gap-5">
                         <div>

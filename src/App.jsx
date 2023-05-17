@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className='max-w-[1280px] mx-auto relative'>
-      <div className='sticky top-0 z-50'>
+      <div>
         <Nav></Nav>
       </div>
       <div>

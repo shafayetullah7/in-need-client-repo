@@ -10,13 +10,13 @@ const Main = () => {
             <div className="w-full">
                 <Carousel></Carousel>
             </div>
-            <div className="mt-52">
+            <div className="mt-52" id="sectors">
                 <Sectors></Sectors>
             </div>
-            <div className="mt-52 overflow-hidden">
+            <div className="mt-52 overflow-hidden" id="post-req">
                 <Post></Post>
             </div>
-            <div>
+            <div className="mt-52">
                 <Footer></Footer>
             </div>
         </div>
