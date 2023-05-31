@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import { RiErrorWarningLine } from "react-icons/ri";
+// import { RiErrorWarningLine } from "react-icons/ri";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 import {
@@ -12,18 +13,14 @@ import {
 
 // Demo styles, see 'Styles' section below for some notes on use.
 import 'react-accessible-accordion/dist/fancy-example.css';
+import useSectors from "../../hooks/useSectors";
+
 
 const Sectors = () => {
-    const [sectors,setSectors] = useState([]);
-    useEffect(()=>{
-        fetch('http://localhost:5000/sectors')
-        .then(res=>res.json())
-        .then(data=>{
-            setSectors(data);
-            console.log(data);
-        })
-    },[])
+    AOS.init();
 
+    const {data:sectors} = useSectors();
+    console.log('data :',sectors)
     return (
         <div className="bg-[#ffeeee] p-10 py-20 rounded-2xl">
             <div>
@@ -35,7 +32,16 @@ const Sectors = () => {
                 {
                     <Accordion className="rounded-xl">
                         {sectors.map(sector => (
-                            <AccordionItem key={sector._id} className="rounded-xl overflow-hidden my-2 border cursor-pointer border-[#FF6D60]">
+                            <AccordionItem key={sector._id} className="rounded-xl overflow-hidden my-7 border cursor-pointer border-[#FF6D60]"
+                            data-aos="fade-up"
+                            data-aos-offset="-200"
+                            data-aos-delay="0"
+                            data-aos-duration="500"
+                            data-aos-easing="ease-in-out"
+                            data-aos-mirror="true"
+                            data-aos-once="false"
+                            data-aos-anchor-placement="top-center"
+                            >
                                 <AccordionItemHeading>
                                     <AccordionItemButton>
                                         <p className="inline-block font-bold">{sector.name}<span className="inline-block mx-10 text-xs border px-2 rounded-lg font-normal">In-Need</span></p>
@@ -60,8 +66,6 @@ const Sectors = () => {
                         ))}
                     </Accordion>
                 }
-            
-                
             </div>
             
         </div>

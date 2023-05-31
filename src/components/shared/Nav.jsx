@@ -9,10 +9,9 @@ const Nav = () => {
     </>;
 
     const navigate = useNavigate();
-    const {user,logout,loading,setLoading} = useContext(AuthContext);
+    const {user,logout,loading} = useContext(AuthContext);
 
     const handleLogin = ()=>{
-        setLoading(true);
         navigate('/login');
     }
 

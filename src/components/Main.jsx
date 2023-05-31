@@ -1,3 +1,5 @@
+
+import { Helmet } from "react-helmet-async";
 import Carousel from "./home/Carousel";
 import Post from "./home/Post";
 import Sectors from "./home/Sectors";
@@ -7,6 +9,9 @@ import Footer from "./shared/Footer";
 const Main = () => {
     return (
         <div>
+            <Helmet>
+                <title>In-need</title>
+            </Helmet>
             <div className="w-full">
                 <Carousel></Carousel>
             </div>

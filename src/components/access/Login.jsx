@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -10,6 +11,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const {signIn} = useContext(AuthContext);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,6 +38,9 @@ const Login = () => {
 
   return (
     <div className="flex justify-center mt-40">
+      <Helmet>
+        <title>In-need | Login</title>
+      </Helmet>
       <div className="w-[350px] p-10 bg-white rounded shadow-xl">
         <h1 className="text-2xl font-bold mb-6 text-[#FF6D60]">Login</h1>
         
@@ -57,6 +62,7 @@ const Login = () => {
           </div>
 
         </form>
+
 
         <p className='mt-7 text-sm text-center'>Do not have an account? <Link className='text-[#FF6D60] font-bold underline' to={'/register'}>Register</Link></p>
       </div>
