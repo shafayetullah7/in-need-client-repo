@@ -2,6 +2,8 @@ import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
 import { Helmet } from 'react-helmet-async';
+// import { toast } from 'react-toastify';
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -24,6 +26,7 @@ const Login = () => {
       .then(result=>{
         console.log(result);
         navigate('/');
+
       })
       .catch(err=>{
         setError('failed to login');

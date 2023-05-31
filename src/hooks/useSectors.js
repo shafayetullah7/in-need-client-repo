@@ -14,7 +14,7 @@ const useSectors = () =>{
           
       })
 
-    console.log(result);
+    // console.log(result);
     if(!result.data)return {...result,data:[]};
     return result;
 }

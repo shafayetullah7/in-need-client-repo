@@ -45,7 +45,15 @@ const Nav = () => {
             {
                 !loading && <div>
                     {!user && <button className="outline-none border border-[#FF6D60] px-4 py-2 rounded-md font-bold text text-[#FF6D60]" onClick={()=>handleLogin()}>Login</button>}
-                    {user && <button className="outline-none border border-[#FF6D60] px-4 py-2 rounded-md font-bold text text-[#FF6D60]" onClick={handleLogout}>Logout</button>}
+                    {user && <div className="dropdown dropdown-end">
+                        {/* <button className="outline-none border border-[#FF6D60] px-4 py-2 rounded-md font-bold text text-[#FF6D60]" onClick={handleLogout}>Logout</button> */}
+                        <img src={user.photoURL} tabIndex={0} className="w-14 h-14 object-cover object-center border-2 rounded-full cursor-pointer" />
+                        <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li className="text-[#FF6D60] py-2 px-2 cursor-pointer hover:text-white hover:bg-[#FF6D60]">Profile</li>
+                            <li className="text-[#FF6D60] py-2 px-2 cursor-pointer hover:text-white hover:bg-[#FF6D60]" onClick={handleLogout}>Logout</li>
+                        </ul>
+                    </div>
+                    }
                 </div>
             }
             </div>

@@ -4,6 +4,7 @@ import Carousel from "./home/Carousel";
 import Post from "./home/Post";
 import Sectors from "./home/Sectors";
 import Footer from "./shared/Footer";
+import { ToastContainer } from "react-toastify";
 
 
 const Main = () => {
@@ -24,6 +25,18 @@ const Main = () => {
             <div className="mt-52">
                 <Footer></Footer>
             </div>
+            <ToastContainer
+                position="top-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover={false}
+                theme="light"
+            />
         </div>
         
     );

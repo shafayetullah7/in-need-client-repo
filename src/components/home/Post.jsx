@@ -175,7 +175,7 @@ const Post = () => {
                 </form>
                 
             </div>
-            <DevTool control={control}></DevTool>
+            {/* <DevTool control={control}></DevTool> */}
         </div>
     );
 };
